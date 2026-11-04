@@ -123,13 +123,6 @@
   footer{text-align:center;color:var(--muted);font-size:.9rem;padding:20px 16px calc(28px + env(safe-area-inset-bottom,0px))}
   footer .en{display:block}
 
-  /* زر إيقاف/تشغيل الحركة (إتاحة الوصول) */
-  .mv{position:fixed;z-index:20;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:calc(14px + env(safe-area-inset-left,0px));
-    width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(8,28,42,.75);color:var(--cyan);display:grid;place-items:center;cursor:pointer;padding:0}
-  .mv svg{width:20px;height:20px;fill:currentColor}
-  .mv .i-play{display:none}.mv[aria-pressed="true"] .i-play{display:block}.mv[aria-pressed="true"] .i-pause{display:none}
-  .mv:hover{background:var(--cyan-700);color:#fff}
-
   /* تأثير اللمس: ترس ومفك يتحركان */
   #fx{position:fixed;inset:0;z-index:15;pointer-events:none;overflow:hidden}
   .tap{position:absolute;display:flex;align-items:flex-end;gap:3px;pointer-events:none;filter:drop-shadow(0 0 8px rgba(41,181,230,.95));will-change:transform,opacity}
@@ -155,7 +148,6 @@
     @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
   }
   @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover,.card:focus-within,.card:active{transform:none}}
-  .paused *{animation-play-state:paused!important}
 </style>
 </head>
 <body>
@@ -173,10 +165,6 @@
   <use href="#driver" x="150" y="330" width="64" height="320" transform="rotate(38 182 490)"/><use href="#driver" x="820" y="80" width="46" height="230" transform="rotate(-28 843 195)"/></g></svg>
 </div>
 <div id="fx" aria-hidden="true"></div>
-<button type="button" class="mv" id="mv" aria-pressed="false" aria-label="إيقاف الحركة · Pause motion" title="إيقاف الحركة · Pause motion">
-  <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.500 5H17v14h-3.500z"/></svg>
-  <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-</button>
 <main id="main">
   <div class="wrap">
     <img class="logo" src="logo-white-520.png" width="520" height="598" alt="شعار مدارس دار الفرسان الأهلية · Dar Al-Forsan National Schools" draggable="false">
@@ -277,21 +265,11 @@
   ['contextmenu','selectstart','copy','cut','dragstart'].forEach(function(t){doc.addEventListener(t,function(e){e.preventDefault()})});
   try{doc.getElementById('y').textContent=new Date().getFullYear()}catch(e){}
 
-  /* إيقاف/تشغيل الحركة */
-  var paused=false,mv=doc.getElementById('mv');
-  function setPaused(p){
-    paused=p;root.classList.toggle('paused',p);mv.setAttribute('aria-pressed',p?'true':'false');
-    mv.setAttribute('aria-label',p?'تشغيل الحركة · Play motion':'إيقاف الحركة · Pause motion');
-    [].forEach.call(doc.querySelectorAll('svg'),function(s){try{p?s.pauseAnimations():s.unpauseAnimations()}catch(e){}});
-  }
-  mv.addEventListener('click',function(e){e.stopPropagation();setPaused(!paused)});
-  mv.addEventListener('pointerdown',function(e){e.stopPropagation()});
-
   /* تأثير اللمس: ترس ومفك يظهران ويتحركان عند أي لمسة */
   var fx=doc.getElementById('fx');
-  var T='<svg class="tg" viewBox="-50 -50 100 100" aria-hidden="true"><use href="#gear"/></svg><svg class="td" viewBox="0 0 24 120" aria-hidden="true"><use href="#driver"/></svg>';
+  var T='<svg class="tg" viewBox="0 0 100 100" aria-hidden="true"><use href="#gear" x="0" y="0" width="100" height="100"/></svg><svg class="td" viewBox="0 0 24 120" aria-hidden="true"><use href="#driver" x="0" y="0" width="24" height="120"/></svg>';
   function burst(x,y){
-    if(paused||fx.children.length>7)return;
+    if(fx.children.length>7)return;
     var e=doc.createElement('div');e.className='tap';e.style.left=x+'px';e.style.top=y+'px';e.innerHTML=T;fx.appendChild(e);
     var done=function(){if(e.parentNode)e.parentNode.removeChild(e)};
     if(!e.animate){setTimeout(done,1400);return}
