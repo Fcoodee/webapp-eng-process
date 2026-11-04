@@ -15,10 +15,19 @@
 <meta property="og:locale" content="ar_SA">
 <style>
   /* ألوان الهوية: ملف المحتوى المعتمد (قسم 24). الأصفر لشعارات الأقسام بطلب صريح (ليس ضمن لوحة الهوية) */
+  /* الخطوط المعتمدة (ملف الهوية، القسم 24). تُرفع الملفات بجانب index.html (OFL).
+     Cairo: خط متغير يغطي 400-900 | Tajawal: ملفات ثابتة 400/500/700/900 */
+  @font-face{font-family:"Cairo";font-style:normal;font-weight:200 1000;font-display:swap;
+    src:local("Cairo"),url("Cairo-wght.woff2") format("woff2")}
+  @font-face{font-family:"Tajawal";font-style:normal;font-weight:400;font-display:swap;src:local("Tajawal Regular"),local("Tajawal-Regular"),url("Tajawal-400.woff2") format("woff2")}
+  @font-face{font-family:"Tajawal";font-style:normal;font-weight:500;font-display:swap;src:local("Tajawal Medium"),local("Tajawal-Medium"),url("Tajawal-500.woff2") format("woff2")}
+  @font-face{font-family:"Tajawal";font-style:normal;font-weight:700;font-display:swap;src:local("Tajawal Bold"),local("Tajawal-Bold"),url("Tajawal-700.woff2") format("woff2")}
+  @font-face{font-family:"Tajawal";font-style:normal;font-weight:900;font-display:swap;src:local("Tajawal Black"),local("Tajawal-Black"),url("Tajawal-900.woff2") format("woff2")}
   :root{
     --ink:#0E1116; --ink-2:#151B23; --cyan:#29B5E6; --cyan-600:#1B95C7; --cyan-700:#1378A4; --cyan-50:#E6F6FC;
     --text:#F2F6F9; --muted:#A9B6C2; --line:#25313C; --yellow:#FFC800;
     --font:"Tajawal","Cairo","Segoe UI",Tahoma,"Noto Sans Arabic",system-ui,sans-serif;
+    --font-head:"Cairo","Tajawal","Segoe UI",Tahoma,"Noto Sans Arabic",system-ui,sans-serif;
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%;color-scheme:dark}
@@ -51,6 +60,7 @@
     @keyframes spin{to{transform:rotate(360deg)}}
     @keyframes tilt{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
   }
+  h1,.card h2,.social h2{font-family:var(--font-head)}
   h1{font-size:clamp(1.6rem,4.6vw,2.6rem);line-height:1.35;margin:0 0 8px;font-weight:900}
   h1 .accent{color:var(--cyan)}
   .h1-en{font-size:clamp(1.05rem,2.6vw,1.35rem);color:var(--muted);margin:0 0 26px;font-weight:500}
