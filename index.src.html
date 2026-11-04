@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>مدارس دار الفرسان الأهلية | الموقع الإلكتروني تحت الإنشاء · Under Construction</title>
+<meta name="description" content="موقع مدارس دار الفرسان الأهلية تحت الإنشاء. نعمل على بناء تجربة رقمية جديدة. Dar Al-Forsan National Schools website is under construction.">
+<!-- مؤقت: يُحذف عند إطلاق الموقع الكامل -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0F2D40">
+<link rel="icon" type="image/png" href="favicon-180.png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="مدارس دار الفرسان الأهلية | Dar Al-Forsan National Schools">
+<meta property="og:locale" content="ar_SA">
+<style>
+  /* الخطوط المعتمدة (ملف الهوية، القسم 24): مستضافة محلياً بجانب index.html. ترخيص SIL OFL 1.1 */
+  @font-face{font-family:"Cairo";font-style:normal;font-weight:400;font-display:swap;src:url("Cairo-400.woff") format("woff")}
+  @font-face{font-family:"Cairo";font-style:normal;font-weight:600;font-display:swap;src:url("Cairo-600.woff") format("woff")}
+  @font-face{font-family:"Cairo";font-style:normal;font-weight:700;font-display:swap;src:url("Cairo-700.woff") format("woff")}
+  @font-face{font-family:"Cairo";font-style:normal;font-weight:900;font-display:swap;src:url("Cairo-900.woff") format("woff")}
+  @font-face{font-family:"Tajawal";font-style:normal;font-weight:400;font-display:swap;src:url("Tajawal-400.woff") format("woff")}
+  @font-face{font-family:"Tajawal";font-style:normal;font-weight:500;font-display:swap;src:url("Tajawal-500.woff") format("woff")}
+  @font-face{font-family:"Tajawal";font-style:normal;font-weight:700;font-display:swap;src:url("Tajawal-700.woff") format("woff")}
+  @font-face{font-family:"Tajawal";font-style:normal;font-weight:900;font-display:swap;src:url("Tajawal-900.woff") format("woff")}
+  :root{
+    /* ألوان الهوية (قسم 24): Cyan وCyan 700. الخلفية أفتح من Ink بطلب صريح */
+    --cyan:#29B5E6; --cyan-600:#1B95C7; --cyan-700:#1378A4; --cyan-50:#E6F6FC;
+    --ink:#0E1116; --text:#F4F8FB; --muted:#BCCEDA; --line:rgba(41,181,230,.28);
+    --bg-top:#133A52; --bg-bot:#0B2233; --card-a:rgba(22,64,88,.80); --card-b:rgba(10,34,51,.80);
+    --font:"Tajawal","Cairo","Segoe UI",Tahoma,"Noto Sans Arabic",system-ui,sans-serif;
+    --font-head:"Cairo","Tajawal","Segoe UI",Tahoma,"Noto Sans Arabic",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%;color-scheme:dark;background:var(--bg-bot);
+    /* منع التحديد والنسخ واللمس المطوّل */
+    -webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+  ::selection{background:transparent}
+  img,svg{-webkit-user-drag:none;user-drag:none}
+  body{margin:0;min-height:100vh;min-height:100dvh;font-family:var(--font);color:var(--text);line-height:1.7;display:flex;flex-direction:column;
+    overflow-x:hidden;overflow-x:clip;
+    background:radial-gradient(1100px 620px at 50% -6%,rgba(41,181,230,.30),transparent 68%),
+               radial-gradient(800px 500px at 100% 100%,rgba(41,181,230,.14),transparent 70%),
+               linear-gradient(180deg,var(--bg-top) 0%,var(--bg-bot) 100%)}
+  a{color:inherit;-webkit-tap-highlight-color:transparent}
+  :focus-visible{outline:3px solid #FFC800;outline-offset:3px;border-radius:8px}
+  .skip{position:absolute;top:8px;inset-inline-start:16px;background:#FFC800;color:#000;padding:8px 14px;border-radius:8px;z-index:30;transform:translateY(-250%)}
+  .skip:focus{transform:none}
+  main{flex:1;display:grid;place-items:center;position:relative;z-index:1;
+    padding-block:calc(36px + env(safe-area-inset-top,0px)) 28px;
+    padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+  .wrap{width:100%;max-width:57.5rem;text-align:center}
+  .en{direction:ltr;unicode-bidi:isolate}
+  .logo{width:min(13rem,54vw);height:auto;margin:0 auto;display:block}
+
+  /* الأقسام */
+  .sections{list-style:none;margin:20px auto 22px;padding:0;display:flex;justify-content:center;align-items:center;gap:clamp(18px,5vw,44px)}
+  .sections li{display:flex}
+  .sections img{height:clamp(46px,9vw,64px);width:auto;display:block;pointer-events:none}
+  .sections .sep{width:2px;height:clamp(46px,9vw,64px);border-radius:2px;
+    background:linear-gradient(to bottom,transparent,var(--cyan),transparent);box-shadow:0 0 10px rgba(41,181,230,.6)}
+
+  .illus{display:block;width:min(17rem,62vw);height:auto;margin:0 auto 22px;overflow:visible;filter:drop-shadow(0 0 18px rgba(41,181,230,.3))}
+
+  /* علامة مائية: ترس ومفك مموّهان */
+  .wm{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .wm svg{position:absolute;inset:0;width:100%;height:100%;opacity:.22;filter:blur(1.2px)}
+  footer{position:relative;z-index:1}
+
+  h1,.card h2,.social h2{font-family:var(--font-head)}
+  h1{font-size:clamp(1.6rem,4.6vw,2.6rem);line-height:1.35;margin:0 0 8px;font-weight:900}
+  h1 .accent{color:var(--cyan)}
+  .h1-en{font-size:clamp(1.05rem,2.6vw,1.35rem);color:var(--muted);margin:0 0 20px;font-weight:500}
+  .support{margin:0 auto 26px;max-width:34em;color:var(--text);font-size:1.02rem}
+  .support .en{display:block;color:var(--muted);font-weight:500;font-size:.92em}
+
+  .year{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;border:1px solid var(--line);background:rgba(8,28,42,.55);
+    padding:8px 22px;border-radius:999px;font-weight:700;margin:0 0 26px}
+  .year .en{color:var(--muted);font-weight:500}
+  .year b{color:var(--cyan)}
+
+  .contact-label{margin:0 0 12px;font-size:1.05rem}
+  .contact-label .en{display:block;color:var(--muted);font-size:.95rem}
+  .ph{width:1.1em;height:1.1em;fill:currentColor;flex:none}
+  .cta{display:inline-flex;align-items:center;gap:10px;background:var(--cyan-700);color:#fff;text-decoration:none;font-weight:700;
+    padding:12px 30px;border-radius:12px;font-size:1.15rem;min-height:48px;box-shadow:0 0 0 1px rgba(41,181,230,.45),0 8px 28px -8px rgba(41,181,230,.6)}
+  .cta:hover,.cta:active{background:var(--cyan-600)}
+  .num{direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums;font-weight:700}
+
+  /* بطاقات الفروع: توهج نيوني */
+  .branches{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16.25rem),1fr));gap:18px;margin:40px 0 0;text-align:start}
+  .card{position:relative;background:linear-gradient(160deg,var(--card-a),var(--card-b));border:1px solid var(--line);border-radius:18px;padding:22px;
+    transition:border-color .25s,box-shadow .25s,transform .25s}
+  .card:hover,.card:focus-within,.card:active{border-color:var(--cyan);transform:translateY(-3px);
+    box-shadow:0 0 0 1px var(--cyan),0 0 14px 2px rgba(41,181,230,.55),0 0 38px 8px rgba(41,181,230,.28),inset 0 0 22px rgba(41,181,230,.10)}
+  .card h2{font-size:1.2rem;margin:0;color:var(--cyan);display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+  .card h2 .en{font-size:.95rem;color:var(--muted);font-weight:500}
+  .addr{margin:2px 0 12px;color:var(--muted);font-size:.95rem}
+  .card ul{list-style:none;margin:0;padding:0}
+  .card li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0;border-top:1px dashed var(--line)}
+  .card li:first-child{border-top:0}
+  .role{display:flex;flex-direction:column;line-height:1.35}
+  .role .en{font-size:.82rem;color:var(--muted)}
+  /* رقم قابل للضغط: زر بأيقونة هاتف */
+  a.num{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 14px;border-radius:999px;text-decoration:none;color:#fff;
+    background:rgba(41,181,230,.16);border:1px solid rgba(41,181,230,.7);transition:background .2s,box-shadow .2s}
+  a.num:hover,a.num:active,a.num:focus-visible{background:var(--cyan-700);box-shadow:0 0 14px rgba(41,181,230,.6)}
+  a.num .ph{color:var(--cyan)}
+  a.num:hover .ph,a.num:active .ph{color:#fff}
+  .hint{margin:10px 0 0;font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .hint .en{color:var(--muted)}
+
+  /* التواصل الاجتماعي */
+  .social{margin-top:40px}
+  .social h2{font-size:1.05rem;margin:0 0 12px;color:var(--muted);font-weight:700}
+  .social ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+  .social a{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;font-size:.82rem;color:var(--muted);min-width:76px;min-height:44px;padding:4px;line-height:1.3}
+  .social svg{width:46px;height:46px;padding:11px;border-radius:50%;background:rgba(41,181,230,.12);border:1px solid var(--line);fill:var(--cyan);
+    transition:background .2s,fill .2s,box-shadow .2s,border-color .2s}
+  .social a:hover svg,.social a:active svg,.social a:focus-visible svg{background:var(--cyan);fill:#0B2233;border-color:var(--cyan);box-shadow:0 0 18px rgba(41,181,230,.6)}
+
+  footer{text-align:center;color:var(--muted);font-size:.9rem;padding:20px 16px calc(28px + env(safe-area-inset-bottom,0px))}
+  footer .en{display:block}
+
+  /* زر إيقاف/تشغيل الحركة (إتاحة الوصول) */
+  .mv{position:fixed;z-index:20;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:calc(14px + env(safe-area-inset-left,0px));
+    width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(8,28,42,.75);color:var(--cyan);display:grid;place-items:center;cursor:pointer;padding:0}
+  .mv svg{width:20px;height:20px;fill:currentColor}
+  .mv .i-play{display:none}.mv[aria-pressed="true"] .i-play{display:block}.mv[aria-pressed="true"] .i-pause{display:none}
+  .mv:hover{background:var(--cyan-700);color:#fff}
+
+  /* تأثير اللمس: ترس ومفك يتحركان */
+  #fx{position:fixed;inset:0;z-index:15;pointer-events:none;overflow:hidden}
+  .tap{position:absolute;display:flex;align-items:flex-end;gap:3px;pointer-events:none;filter:drop-shadow(0 0 8px rgba(41,181,230,.95));will-change:transform,opacity}
+  .tg{width:46px;height:46px;color:#29B5E6}
+  .td{width:15px;height:58px;color:#E6F6FC;transform-origin:50% 92%}
+
+  /* شاشات كبيرة */
+  @media (min-width:1600px){html{font-size:112.5%}}
+  @media (min-width:2200px){html{font-size:137.5%}}
+  /* هاتف بوضع أفقي أو شاشة قصيرة */
+  @media (max-height:540px) and (orientation:landscape){
+    main{padding-block:calc(14px + env(safe-area-inset-top,0px)) 14px}
+    .logo{width:min(8rem,22vh*1.2)}.sections{margin:12px auto}.illus{width:min(9rem,40vh);margin-bottom:12px}
+    .branches,.social{margin-top:22px}
+  }
+  /* شاشات صغيرة جداً (320px) */
+  @media (max-width:350px){.card{padding:16px}.card li{flex-wrap:wrap}.cta{padding:12px 18px;font-size:1.05rem}}
+
+  @media (prefers-reduced-motion:no-preference){
+    .wrap>*{animation:rise .6s ease both}
+    .wrap>*:nth-child(2){animation-delay:.06s}.wrap>*:nth-child(3){animation-delay:.12s}.wrap>*:nth-child(4){animation-delay:.18s}
+    .wrap>*:nth-child(5){animation-delay:.24s}.wrap>*:nth-child(6){animation-delay:.3s}.wrap>*:nth-child(7){animation-delay:.36s}
+    @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  }
+  @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover,.card:focus-within,.card:active{transform:none}}
+  .paused *{animation-play-state:paused!important}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">تخطي إلى المحتوى</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="gear" viewBox="-50 -50 100 100"><g fill="currentColor">
+<path fill-rule="evenodd" d="M-32 0a32 32 0 1 0 64 0a32 32 0 1 0-64 0zM-15 0a15 15 0 1 1 30 0a15 15 0 1 1-30 0z"/>
+<rect x="-7" y="-44" width="14" height="16" rx="3"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(45)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(90)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(135)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(180)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(225)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(270)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(315)"/></g></symbol>
+<symbol id="driver" viewBox="0 0 24 120"><g fill="currentColor"><rect x="5" y="0" width="14" height="48" rx="7"/><rect x="7" y="46" width="10" height="7" rx="2"/><rect x="11" y="53" width="2.4" height="50"/><path d="M9 103h6l-1 10h-4z"/></g></symbol>
+<symbol id="phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1l-2.25 2.2z"/></symbol>
+</defs></svg>
+<div class="wm" aria-hidden="true">
+ <svg viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid slice"><g color="#A8E2F8">
+  <use href="#gear" x="610" y="400" width="560" height="560"/><use href="#gear" x="-160" y="-170" width="360" height="360"/>
+  <use href="#driver" x="150" y="330" width="64" height="320" transform="rotate(38 182 490)"/><use href="#driver" x="820" y="80" width="46" height="230" transform="rotate(-28 843 195)"/></g></svg>
+</div>
+<div id="fx" aria-hidden="true"></div>
+<button type="button" class="mv" id="mv" aria-pressed="false" aria-label="إيقاف الحركة · Pause motion" title="إيقاف الحركة · Pause motion">
+  <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.500 5H17v14h-3.500z"/></svg>
+  <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+</button>
+<main id="main">
+  <div class="wrap">
+    <img class="logo" src="logo-white-520.png" width="520" height="598" alt="شعار مدارس دار الفرسان الأهلية · Dar Al-Forsan National Schools" draggable="false">
+
+    <ul class="sections" aria-label="أقسام المدارس · School sections">
+      <li><img src="logo-diploma-white.png" width="360" height="447" alt="شعار قسم الدبلوما · Diploma Section" draggable="false"></li>
+      <li class="sep" role="presentation" aria-hidden="true"></li>
+      <li><img src="logo-sp-edu-white.png" width="360" height="348" alt="شعار قسم التربية الخاصة · Special Education Section" draggable="false"></li>
+    </ul>
+
+    <!-- رسم أصلي (SVG) لحالة "تحت الإنشاء": الحركة عبر SMIL (تعمل على iOS وAndroid) -->
+    <svg class="illus" viewBox="0 0 320 214" aria-hidden="true" focusable="false">
+      <defs>
+        <radialGradient id="sh" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#29B5E6" stop-opacity=".5"/><stop offset="1" stop-color="#29B5E6" stop-opacity="0"/></radialGradient>
+        <mask id="jaw"><rect x="-30" y="-30" width="60" height="60" fill="#fff"/><rect x="-8" y="-22" width="16" height="20" rx="2" fill="#000"/></mask>
+      </defs>
+      <ellipse cx="160" cy="203" rx="120" ry="8" fill="url(#sh)"/>
+      <rect x="140" y="166" width="40" height="26" fill="#2C5068"/>
+      <rect x="112" y="190" width="96" height="10" rx="5" fill="#F4F8FB"/>
+      <rect x="40" y="12" width="240" height="156" rx="14" fill="#0C2A3D" stroke="#F4F8FB" stroke-width="5"/>
+      <g fill="#2F5A74">
+        <rect x="58" y="32" width="58" height="8" rx="4"/><rect x="58" y="50" width="40" height="8" rx="4"/>
+        <rect x="58" y="128" width="46" height="8" rx="4"/><rect x="58" y="144" width="30" height="8" rx="4"/>
+        <rect x="206" y="32" width="56" height="34" rx="7"/>
+        <rect x="206" y="128" width="56" height="7" rx="3.5"/><rect x="214" y="144" width="48" height="7" rx="3.5"/>
+      </g>
+      <g transform="translate(160 90)">
+        <g>
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite"/>
+          <g fill="#29B5E6">
+            <rect x="-7" y="-43" width="14" height="15" rx="3"/><rect x="-7" y="-43" width="14" height="15" rx="3" transform="rotate(45)"/>
+            <rect x="-7" y="-43" width="14" height="15" rx="3" transform="rotate(90)"/><rect x="-7" y="-43" width="14" height="15" rx="3" transform="rotate(135)"/>
+            <rect x="-7" y="-43" width="14" height="15" rx="3" transform="rotate(180)"/><rect x="-7" y="-43" width="14" height="15" rx="3" transform="rotate(225)"/>
+            <rect x="-7" y="-43" width="14" height="15" rx="3" transform="rotate(270)"/><rect x="-7" y="-43" width="14" height="15" rx="3" transform="rotate(315)"/>
+            <circle r="32"/>
+          </g>
+          <circle r="19" fill="#0C2A3D"/>
+        </g>
+      </g>
+      <g transform="translate(110 118) rotate(40)">
+        <g fill="#BCCEDA">
+          <animateTransform attributeName="transform" type="rotate" values="-8;8;-8" keyTimes="0;0.5;1" dur="2.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+          <rect x="-6" y="8" width="12" height="62" rx="6"/>
+          <circle r="18" mask="url(#jaw)"/>
+        </g>
+      </g>
+    </svg>
+
+    <h1>الموقع الإلكتروني للمدارس <span class="accent">تحت الإنشاء</span> .. نعمل على بناء تجربة رقمية جديدة</h1>
+    <p class="h1-en en" lang="en" dir="ltr">The schools' website is under construction .. We are building a new digital experience</p>
+    <p class="support">نعتز بثقتكم، ونرحب باستفساراتكم عبر القنوات أدناه. <span class="en" lang="en" dir="ltr">We value your trust and welcome your enquiries through the channels below.</span></p>
+
+    <p class="year"><span>العام الدراسي <b><bdi dir="ltr">2026-2027</bdi></b></span><span class="en" lang="en" dir="ltr">Academic Year <b><bdi>2026-2027</bdi></b></span></p>
+
+    <p class="contact-label">نستقبل تواصلكم على <span class="en" lang="en" dir="ltr">We welcome your contact on</span></p>
+    <a class="cta" href="tel:920001684" aria-label="اتصال بالرقم الموحد 920001684 · Call 920001684"><svg class="ph" aria-hidden="true"><use href="#phone"/></svg><span class="num">920001684</span></a>
+
+    <section class="branches" aria-label="الفروع · Branches">
+      <div class="card" tabindex="0">
+        <h2>فرع السلامة <span class="en" lang="en" dir="ltr">Al-Salamah Branch</span></h2>
+        <p class="addr">حي السلامة، جدة · <span class="en" lang="en" dir="ltr">Al-Salamah District, Jeddah</span></p>
+        <ul>
+          <li><span class="role">قسم البنين <span class="en" lang="en" dir="ltr">Boys Section</span></span><a class="num" href="tel:0537311684" aria-label="اتصال بقسم البنين 0537311684 · Call Boys Section"><svg class="ph" aria-hidden="true"><use href="#phone"/></svg><span>0537311684</span></a></li>
+          <li><span class="role">قسم البنات <span class="en" lang="en" dir="ltr">Girls Section</span></span><a class="num" href="tel:0531611684" aria-label="اتصال بقسم البنات 0531611684 · Call Girls Section"><svg class="ph" aria-hidden="true"><use href="#phone"/></svg><span>0531611684</span></a></li>
+        </ul>
+        <p class="hint"><svg class="ph" aria-hidden="true" style="color:var(--cyan)"><use href="#phone"/></svg><span>اضغط على الرقم للاتصال</span><span class="en" lang="en" dir="ltr">Tap a number to call</span></p>
+      </div>
+      <div class="card" tabindex="0">
+        <h2>فرع الصالحية <span class="en" lang="en" dir="ltr">Al-Salihiyah Branch</span></h2>
+        <p class="addr">حي الصالحية، جدة · <span class="en" lang="en" dir="ltr">Al-Salihiyah District, Jeddah</span></p>
+        <ul>
+          <li><span class="role">الاستقبال <span class="en" lang="en" dir="ltr">Reception</span></span><a class="num" href="tel:0573561112" aria-label="اتصال بالاستقبال 0573561112 · Call Reception"><svg class="ph" aria-hidden="true"><use href="#phone"/></svg><span>0573561112</span></a></li>
+        </ul>
+        <p class="hint"><svg class="ph" aria-hidden="true" style="color:var(--cyan)"><use href="#phone"/></svg><span>اضغط على الرقم للاتصال</span><span class="en" lang="en" dir="ltr">Tap a number to call</span></p>
+      </div>
+    </section>
+
+    <nav class="social" aria-label="حساباتنا على مواقع التواصل الاجتماعي · Our social accounts">
+      <h2>تابعونا <span class="en" lang="en" dir="ltr">· Follow us</span></h2>
+      <ul>
+        <li><a href="https://facebook.com/daralforsan" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك · Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21h3z"/></svg><span>فيسبوك<br><span class="en" lang="en" dir="ltr">Facebook</span></span></a></li>
+        <li><a href="https://instagram.com/daralforsan" target="_blank" rel="noopener noreferrer" aria-label="إنستغرام · Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8zm4 2.8a4.2 4.2 0 1 1 0 8.4 4.2 4.2 0 0 1 0-8.4zm0 2a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4zm4.4-3.3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><span>إنستغرام<br><span class="en" lang="en" dir="ltr">Instagram</span></span></a></li>
+        <li><a href="https://x.com/daralforsan" target="_blank" rel="noopener noreferrer" aria-label="إكس (تويتر) · X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3l-6.6 7.5L22 21h-6.1l-4.8-6.2L5.600 21h-3l7-8L2 3h6.200l4.300 5.700L17.800 3zm-1.100 16.200h1.700L7.400 4.700H5.600l11.100 14.500z"/></svg><span>إكس<br><span class="en" lang="en" dir="ltr">X</span></span></a></li>
+        <li><a href="https://tiktok.com/@daralforsan" target="_blank" rel="noopener noreferrer" aria-label="تيك توك · TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 3c.3 2.4 1.7 4 4 4.2v3.1c-1.5 0-2.8-.4-4-1.2v6.1c0 3.3-2.6 5.8-5.8 5.8S5 18.500 5 15.400s2.700-5.900 6.100-5.700v3.200c-1.500-.3-2.900.8-2.900 2.400 0 1.400 1.100 2.600 2.600 2.600s2.600-1.100 2.600-2.700V3h3.200z"/></svg><span>تيك توك<br><span class="en" lang="en" dir="ltr">TikTok</span></span></a></li>
+        <li><a href="https://snapchat.com/add/daralforsan" target="_blank" rel="noopener noreferrer" aria-label="سناب شات · Snapchat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c2.6 0 4.3 2 4.3 4.4v2c.5.1 1.100.1 1.700.2.5.1.6.7.2.9-.6.4-1.4.5-1.700.9-.1.4.7 1.700 2 2.300.4.2.4.7 0 .9-.7.4-1.500.4-2.100.6-.2.6-.6 1-1.300 1-.6 0-1.300-.2-2-.2s-1.400.6-2.300.6-1.700-.6-2.400-.6c-.7 0-1.300.2-1.900.2-.7 0-1.100-.4-1.300-1-.6-.2-1.400-.2-2-.6-.4-.2-.4-.7 0-.9 1.300-.6 2.100-1.900 2-2.300-.3-.4-1.100-.5-1.700-.9-.4-.2-.3-.8.2-.9.6-.1 1.200-.1 1.700-.2v-2C7.700 5 9.400 3 12 3z"/></svg><span>سناب شات<br><span class="en" lang="en" dir="ltr">Snapchat</span></span></a></li>
+        <li><a href="https://youtube.com/@daralforsan" target="_blank" rel="noopener noreferrer" aria-label="يوتيوب · YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.800-1.800C18.200 5 12 5 12 5s-6.200 0-7.800.4A2.500 2.500 0 0 0 2.400 7.200C2 8.800 2 12 2 12s0 3.200.4 4.800a2.500 2.500 0 0 0 1.800 1.800C5.800 19 12 19 12 19s6.200 0 7.800-.4a2.500 2.500 0 0 0 1.800-1.800c.4-1.600.4-4.800.4-4.800s0-3.200-.4-4.800zM10 15V9l5.200 3L10 15z"/></svg><span>يوتيوب<br><span class="en" lang="en" dir="ltr">YouTube</span></span></a></li>
+      </ul>
+    </nav>
+  </div>
+</main>
+<footer>© <span id="y">2026</span> مدارس دار الفرسان الأهلية · جميع الحقوق محفوظة<span class="en" lang="en" dir="ltr">Dar Al-Forsan National Schools · All rights reserved</span></footer>
+<noscript><p style="text-align:center;color:#fff;padding:16px">مدارس دار الفرسان الأهلية · Dar Al-Forsan National Schools · 920001684</p></noscript>
+<!--OBF-->
+<script>
+(function(){
+  var doc=document,root=doc.documentElement;
+  /* قفل النسخ والتحديد والقائمة المطوّلة والسحب */
+  ['contextmenu','selectstart','copy','cut','dragstart'].forEach(function(t){doc.addEventListener(t,function(e){e.preventDefault()})});
+  try{doc.getElementById('y').textContent=new Date().getFullYear()}catch(e){}
+
+  /* إيقاف/تشغيل الحركة */
+  var paused=false,mv=doc.getElementById('mv');
+  function setPaused(p){
+    paused=p;root.classList.toggle('paused',p);mv.setAttribute('aria-pressed',p?'true':'false');
+    mv.setAttribute('aria-label',p?'تشغيل الحركة · Play motion':'إيقاف الحركة · Pause motion');
+    [].forEach.call(doc.querySelectorAll('svg'),function(s){try{p?s.pauseAnimations():s.unpauseAnimations()}catch(e){}});
+  }
+  mv.addEventListener('click',function(e){e.stopPropagation();setPaused(!paused)});
+  mv.addEventListener('pointerdown',function(e){e.stopPropagation()});
+
+  /* تأثير اللمس: ترس ومفك يظهران ويتحركان عند أي لمسة */
+  var fx=doc.getElementById('fx');
+  var T='<svg class="tg" viewBox="-50 -50 100 100" aria-hidden="true"><use href="#gear"/></svg><svg class="td" viewBox="0 0 24 120" aria-hidden="true"><use href="#driver"/></svg>';
+  function burst(x,y){
+    if(paused||fx.children.length>7)return;
+    var e=doc.createElement('div');e.className='tap';e.style.left=x+'px';e.style.top=y+'px';e.innerHTML=T;fx.appendChild(e);
+    var done=function(){if(e.parentNode)e.parentNode.removeChild(e)};
+    if(!e.animate){setTimeout(done,1400);return}
+    var a=e.animate([
+      {opacity:0,transform:'translate(-50%,-30%) scale(.4)'},
+      {opacity:1,transform:'translate(-50%,-60%) scale(1)',offset:.2},
+      {opacity:1,transform:'translate(-50%,-75%) scale(1)',offset:.72},
+      {opacity:0,transform:'translate(-50%,-95%) scale(.9)'}],{duration:1500,easing:'ease-out'});
+    e.querySelector('.tg').animate([{transform:'rotate(0deg)'},{transform:'rotate(420deg)'}],{duration:1500,easing:'ease-in-out'});
+    e.querySelector('.td').animate([{transform:'rotate(-35deg)'},{transform:'rotate(8deg)',offset:.35},{transform:'rotate(-22deg)',offset:.7},{transform:'rotate(8deg)'}],{duration:1500,easing:'ease-in-out'});
+    a.onfinish=done;a.oncancel=done;
+  }
+  doc.addEventListener('pointerdown',function(e){burst(e.clientX,e.clientY)},{passive:true,capture:true});
+})();
+</script>
+</body>
+</html>
