@@ -61,6 +61,13 @@
     @keyframes spin{to{transform:rotate(360deg)}}
     @keyframes tilt{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
   }
+  /* علامة مائية: ترس ومفك مموّهان في الخلفية (الخيار أ) */
+  main,footer{position:relative;z-index:1}
+  .wm{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .wm svg{position:absolute;inset:0;width:100%;height:100%;opacity:.10;filter:blur(2.2px)}
+  .greet{margin:0 0 10px;font-family:var(--font-head);font-weight:700;color:var(--cyan);font-size:clamp(1.05rem,2.6vw,1.3rem);line-height:1.5}
+  .greet .en,.support .en{display:block;color:var(--muted);font-weight:500;font-size:.92em}
+  .support{margin:-8px auto 26px;max-width:34em;color:var(--text);font-size:1.02rem}
   h1,.card h2,.social h2{font-family:var(--font-head)}
   h1{font-size:clamp(1.6rem,4.6vw,2.6rem);line-height:1.35;margin:0 0 8px;font-weight:900}
   h1 .accent{color:var(--cyan)}
@@ -117,6 +124,17 @@
 </head>
 <body>
 <a class="skip" href="#main">تخطي إلى المحتوى</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="gear" viewBox="-50 -50 100 100"><g fill="currentColor">
+<path fill-rule="evenodd" d="M-32 0a32 32 0 1 0 64 0a32 32 0 1 0-64 0zM-15 0a15 15 0 1 1 30 0a15 15 0 1 1-30 0z"/>
+<rect x="-7" y="-44" width="14" height="16" rx="3"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(45)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(90)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(135)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(180)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(225)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(270)"/><rect x="-7" y="-44" width="14" height="16" rx="3" transform="rotate(315)"/></g></symbol>
+<symbol id="driver" viewBox="0 0 24 120"><g fill="currentColor"><rect x="5" y="0" width="14" height="48" rx="7"/><rect x="7" y="46" width="10" height="7" rx="2"/><rect x="11" y="53" width="2.4" height="50"/><path d="M9 103h6l-1 10h-4z"/></g></symbol>
+</defs></svg>
+<div class="wm" aria-hidden="true">
+ <svg viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid slice"><g color="#29B5E6">
+  <use href="#gear" x="610" y="400" width="560" height="560"/><use href="#gear" x="-160" y="-170" width="360" height="360"/>
+  <use href="#driver" x="150" y="330" width="64" height="320" transform="rotate(38 182 490)"/><use href="#driver" x="820" y="80" width="46" height="230" transform="rotate(-28 843 195)"/></g></svg>
+</div>
 <main id="main">
   <div class="wrap">
     <img class="logo" src="logo-white-520.png" width="520" height="598" alt="شعار مدارس دار الفرسان الأهلية · Dar Al-Forsan National Schools">
@@ -161,8 +179,10 @@
       </g>
     </svg>
 
+    <p class="greet">إلى مجتمعنا التعليمي الكريم <span class="en" lang="en" dir="ltr">To our valued learning community</span></p>
     <h1>الموقع الإلكتروني للمدارس <span class="accent">تحت الإنشاء</span> .. نعمل على بناء تجربة رقمية جديدة</h1>
     <p class="h1-en en" lang="en" dir="ltr">The schools' website is under construction .. We are building a new digital experience</p>
+    <p class="support">نعتز بثقتكم، ونرحب باستفساراتكم عبر القنوات أدناه. <span class="en" lang="en" dir="ltr">We value your trust and welcome your enquiries through the channels below.</span></p>
 
     <p class="year"><span>العام الدراسي <b><bdi dir="ltr">2026-2027</bdi></b></span><span class="en" lang="en" dir="ltr">Academic Year <b><bdi>2026-2027</bdi></b></span></p>
 
